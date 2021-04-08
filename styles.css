@@ -22,7 +22,7 @@ body {
     height: 100%;
     position: fixed;
     background: black;
-    opacity: .6;
+    opacity: .7;
 }
 
 .nav {
@@ -249,6 +249,51 @@ body {
     justify-content: center;
 }
 
+.socials {
+    position: fixed;
+    bottom: 1px;
+    opacity: 0;
+}
+
+.socials li {
+    margin: 20px;
+    list-style: none;
+}
+
+.socials a {
+    text-decoration: none;
+    color: seagreen;
+    padding: 1px;
+    font-size: 30px;
+    transition: .3s ease;
+}
+
+.github {
+    margin-left: -1px;
+}
+
+.github:hover {
+    color: white;
+}
+
+.linkedin:hover {
+    color:  #2867B2;
+    transition: .3s ease;
+}
+
+.insta:hover {
+    color: rgb(225, 48, 108);
+    transition: .3s ease;
+}
+
+
+.line {
+    text-align: center;
+    margin-left: 30px;
+    border-left: 3px solid rgba(46, 139, 86, 0.644);
+    height: 100px;
+}
+
 .title-appear {
     opacity: 1;
     transform: translateY(30px);
@@ -288,19 +333,60 @@ body {
     transform: scale(1.5);
 }
 
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 320px){    
+    .nav {
+        display: none;
+    }
+    
+    .title {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+
+    .socials {
+        padding-top: 100px;
+    }
+
+    .projects-grid {
+        margin-left: -30px;
+    }
+
+    .projects-grid div {
+        max-width: 150px;
+        min-height: 400px;
+    }
+
+    .projects-grid p {
+        font-size: 8px;
+    }
+
+    .cv-image {
+        margin-left: -100px;
+    }
+
+    .cv img {
+        max-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 540px){
     * {
         overflow-x: hidden;
     }
 
     .nav {
-        background: rgb(0, 0, 0, .5);
+        background: rgb(0, 0, 0, .3);
     }
     
     .nav ul {
         float: none;
         text-align: center;
         padding: 10px;
+        margin-left: 30px;
     }
 
     hr {
@@ -352,17 +438,22 @@ body {
     }
 
     .projects-grid {
+        width: 80%;
         display: block;
         margin-left: -60px;
     }
 
     .projects-grid div {
         width: 200px;
-        height: 250px;
+        height: 300px;
+    }
+
+    .projects-grid h3 {
+        font-size: 20px;
     }
 
     .projects-grid p {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .cv {
@@ -375,5 +466,73 @@ body {
 
     .contact {
         margin-bottom: 100px;
+    }
+
+    .socials {
+        bottom: 350px;
+        position: relative;
+    }
+
+    .socials ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .line {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    * {
+        overflow-x: hidden;
+    }
+
+    body {
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    hr {
+        margin: auto;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .watermark {
+        padding-left: 50px;
+    }
+
+    .text {
+        width: 80%;
+    }
+    
+    .text h1 {
+        text-align: center;
+    }
+
+    .text p {
+        font-size: 25px
+    }
+
+    .projects-grid {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .projects-grid p {
+        font-size: 20px;
+    }
+
+    .cv-image {
+        width: -100%;
+        margin: 0px;
+    }
+
+    .cv img {
+        width: 80%;
     }
 }

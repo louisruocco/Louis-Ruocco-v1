@@ -8,12 +8,15 @@ const cv = document.querySelector(".cv");
 const cvImage = document.querySelector(".cv-image");
 const contact = document.querySelector(".contact");
 const button = document.querySelector(".submit-btn");
+const socials = document.querySelector(".socials");
 
 window.addEventListener("scroll", arrowDisappear);
 window.addEventListener("scroll", aboutAppear);
 window.addEventListener("scroll", projectsAppear);
 window.addEventListener("scroll", cvAppear);
 window.addEventListener("scroll", contactAppear);
+
+setInterval(socialsAppear, 3000);
 
 setInterval(navAppear, 2250);
 window.addEventListener("load", onLoad);
@@ -98,6 +101,10 @@ function contactAppear() {
     if(contactPosition > screenPosition){
         contact.classList.remove("appear");
     }
+}
+
+function socialsAppear(){
+    socials.classList.add("appear");
 }
 
 function zoom(){
