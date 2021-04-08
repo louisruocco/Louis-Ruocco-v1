@@ -9,15 +9,16 @@ const cvImage = document.querySelector(".cv-image");
 const contact = document.querySelector(".contact");
 const button = document.querySelector(".submit-btn");
 
-setInterval(navAppear, 2250);
-window.addEventListener("load", onLoad);
-setInterval(subtitleAppear, 1250);
-setInterval(arrowDown, 2250);
 window.addEventListener("scroll", arrowDisappear);
 window.addEventListener("scroll", aboutAppear);
 window.addEventListener("scroll", projectsAppear);
 window.addEventListener("scroll", cvAppear);
 window.addEventListener("scroll", contactAppear);
+
+setInterval(navAppear, 2250);
+window.addEventListener("load", onLoad);
+setInterval(subtitleAppear, 1250);
+setInterval(arrowDown, 2250);
 cvImage.addEventListener("click", zoom);
 button.addEventListener("click", openEmail);
 
@@ -49,7 +50,7 @@ function arrowDisappear(){
 
 function aboutAppear(){
     let aboutPosition = about.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 2;
+    let screenPosition = window.innerHeight / 1.5;
 
     if(aboutPosition < screenPosition){
         about.classList.add("appear");
@@ -62,7 +63,7 @@ function aboutAppear(){
 
 function projectsAppear(){
     let projectsPosition = projects.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 2;
+    let screenPosition = window.innerHeight / 1.5;
 
     if(projectsPosition < screenPosition){
         projects.classList.add("appear");
@@ -75,7 +76,7 @@ function projectsAppear(){
 
 function cvAppear(){
     let cvPosition = cv.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 2.25;
+    let screenPosition = window.innerHeight / 1.5;
 
     if(cvPosition < screenPosition){
         cv.classList.add("appear");
@@ -88,7 +89,7 @@ function cvAppear(){
 
 function contactAppear() {
     let contactPosition = contact.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 2.25;
+    let screenPosition = window.innerHeight / 1.5;
 
     if(contactPosition < screenPosition){
         contact.classList.add("appear");
