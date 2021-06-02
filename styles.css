@@ -207,6 +207,7 @@ body {
     padding: 60px;
     display: grid;
     grid-template-columns: 350px 350px 350px;
+    row-gap: 60px;
     text-align: center;
 }
 
@@ -218,7 +219,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 50px;
     border-radius: 15px;
     margin: 5%;
     background: rgba(0, 73, 133, 0.5);
@@ -290,7 +291,7 @@ body {
 
 .line {
     text-align: center;
-    margin-left: 30px;
+    margin-left: 33px;
     border-left: 3px solid rgba(46, 139, 86, 0.644);
     height: 100px;
 }
@@ -334,9 +335,13 @@ body {
     transform: scale(1.5);
 }
 
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: 540px){
     * {
         overflow-x: hidden;
+    }
+
+    body {
+        background: rgb(0, 17, 112);
     }
 
     hr {
@@ -344,21 +349,22 @@ body {
     }
 
     .nav {
-        background: rgb(0, 0, 0, .3);
         position: relative;
+        width: 100%;
     }
     
     .nav ul {
         float: none;
         text-align: center;
         padding: 10px;
-        margin-left: 30px;
+        margin-left: 40px;
     }
+
 
     .nav a {
         width: 100%;
         padding: 10px;
-        font-size: 20px;
+        font-size: 18px !important;
         display: flex;
         justify-content: space-evenly;
     }
@@ -413,6 +419,10 @@ body {
         width: 270px;
     }
 
+    .contact {
+        margin-bottom: 50px !important;
+    }
+
     .socials {
         bottom: 250px;
         position: relative;
@@ -428,7 +438,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1400px){
     * {
         overflow-x: hidden;
     }
@@ -477,17 +487,17 @@ body {
     }
 }
 
-@media only screen and (max-width: 1366px){
+@media only screen and (max-width: 1600px){
     .title-section {
         height: 80vh;
     }
     
     .projects-grid {
-        margin-left: -30%;
+        margin-left: -25%;
     }
 
     .contact {
-        margin-bottom: 250px;
+        margin-bottom: 250px !important;
     }
 
     .line {
