@@ -13,8 +13,7 @@ html {
 }
 
 body {
-    background-image: url("background.jpg");
-    background-attachment: fixed;
+    background: rgb(0, 17, 112);
 }
 
 .overlay {
@@ -155,7 +154,7 @@ body {
 }
 
 .cv-image img {
-    border-radius: 20px;
+    width: 100%;
 }
 
 .cv a {
@@ -177,7 +176,7 @@ body {
 
 .contact p {
     width: 100%;
-    text-align: center;
+    text-align: justify;
 }
 
 .button {
@@ -233,7 +232,7 @@ body {
 }
 
 .projects-grid p {
-    text-align: left;
+    text-align: center;
     font-size: 20px;
 }
 
@@ -249,6 +248,10 @@ body {
 .technologies {
     display: flex;
     justify-content: center;
+}
+
+.technologies p {
+    text-align: center;
 }
 
 .socials {
@@ -328,11 +331,6 @@ body {
 .disappear {
     opacity: 0;
     transition: 1s ease;
-}
-
-.cv-zoom {
-    transition: .5s ease;
-    transform: scale(1.5);
 }
 
 @media only screen and (max-width: 540px){
